@@ -39,7 +39,7 @@ Project Setup and Installation using Terminal:
 	cd [file name]
 
 3. Create a virtual environment
-	python3 -m venv biovenv
+	python3.10 -m venv venv
 
 4. Activate the virtual environment
 	source biovenv/bin/activate
