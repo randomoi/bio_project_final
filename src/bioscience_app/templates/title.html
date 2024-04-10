@@ -1,0 +1,59 @@
+<!-- START: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->
+<nav class="navbar navbar-expand-md sticky-top flex-column">
+    <div class="w-100 d-flex">
+        <div class="navbar-header" id="header">
+            <!-- references: logo provided in the course -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/202002_Laboratory_instrument_dna.svg" id="logo" alt="dna logo" width="50px" height="50px">
+            <!-- navigation bar header -->
+            <h1 id="application_title">Bioscience Research Web Service</h2>
+        </div>
+    </div>
+
+    <div class="w-100 d-flex">
+        <!-- unordered list of navigation bar links -->
+        <ul class="navbar-nav mr-auto" id="navigation">
+            <!-- home page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- sawgger page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'swagger' %}">Swagger<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- redoc page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'redoc' %}">ReDoc<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- protein list page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'protein-list' %}">Create Protein<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- protein by id page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'protein-detail' protein_id='A0A016S8J7' %}">Protein by ID<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- pfam by id page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'pfam-domain-detail' domain_id='PF00360' %}">Pfam ID<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- protein by taxa page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'protein_by_taxa' taxa_id='55661' %}">Proteins of Taxa<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- prafms of taxa page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'domain_by_taxa' taxa_id='55661' %}">Pfams of Taxa<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- coverage page redirect -->
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'coverage' protein_id='A0A016S8J7' %}">Coverage<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- admin button -->
+            <li class="admin-button">
+                <a href="{% url 'admin:index' %}">Django Admin</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- END: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->

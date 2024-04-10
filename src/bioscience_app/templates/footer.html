@@ -1,0 +1,37 @@
+{% load my_tags %} {% load bootstrap4 %} {% load tz %}
+<!-- START: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- footer -->
+        <div class="col-md-8" id="footer">
+            <!-- current date -->
+            <p>Date: {% footer_date %}</p>
+            <!-- copyright sign, year and message  -->
+            <p> &copy; {% copyright_year %} Bioscience Research. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+
+{% block scripts %}
+<script>
+    // https://developer.mozilla.org/en-US/docs/Web/API/Document/addEventListener
+    // https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+    // adds top margin to footer when search results are displayed
+    // event listener
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchResultDiv = document.querySelector('.search-result');
+        const footerDiv = document.querySelector('#footer');
+        if (searchResultDiv && footerDiv) {
+            footerDiv.style.marginTop = searchResultDiv.offsetHeight + 'px';
+        }
+    });
+</script>
+{% endblock %}
+
+</body>
+
+</html>
+
+<!-- END: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->

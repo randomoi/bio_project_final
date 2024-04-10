@@ -1,0 +1,107 @@
+{% extends 'base.html' %} {% load static %}{% load bootstrap4 %} {% block title %} Single Page Application {% endblock %} {% block content %}
+
+<!-- START: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->
+<!-- container for left and right sections -->
+<div class="container-fluid mt-5">
+    <div class="row">
+        <!-- left section -->
+        <div class="col-md-3">
+            <!-- search for protein in left section -->
+            <div class="dashboard dashboard-search">
+                <div class="row">
+                    <a href="#" class="btn btn-info text-white search-db">Search Database</a>
+                </div>
+                <div class="row">
+                    <a href="/protein/create_new_protein/" class="btn btn-primary text-white create-protein">Create Protein</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- vertical dotted separator -->
+        <div class="col-md-1 d-flex justify-content-center align-items-center">
+            <div class="separator"></div>
+        </div>
+        <!-- right section -->
+        <div class="col-md-8">
+            <div id="search-section">
+                <!-- back button to return to home -->
+                <div class="back-button">
+                    <a href="/" class="btn btn-info back-btn">Back</a>
+                </div>
+                <div class="container mt-5">
+                    <h1>Database Search</h1>
+                    <!-- protein search form -->
+                    <div class="form-group mt-4">
+                        <label for="protein_input">Search for protein sequence and all information about it:</label>
+                        <input type="text" class="form-control" id="protein_input" placeholder="Enter a protein ID">
+                        <button id="protein_button" class="btn btn-primary mt-2">Search</button>
+                    </div>
+                    <!-- protein search results -->
+                    <div id="protein_result" class="mt-5">
+                        <div id="protein_result_collapsible" class="collapsible">
+                            <div id="protein_result_content" class="collapsible-content"></div>
+                        </div>
+                    </div>
+                    <!-- pfam search form -->
+                    <div class="form-group mt-5">
+                        <label for="pfam_input">Search for domain and domain description:</label>
+                        <input type="text" class="form-control" id="pfam_input" placeholder="Enter a Pfam ID">
+                        <button id="pfam_button" class="btn btn-primary mt-2">Search</button>
+                    </div>
+                    <!-- pfam search results -->
+                    <div id="pfam_result" class="mt-5">
+                        <div id="pfam_result_collapsible" class="collapsible">
+                            <div id="pfam_result_content" class="collapsible-content"></div>
+                        </div>
+                    </div>
+                    <!-- proteins of taxonomy search form -->
+                    <div class="form-group mt-5">
+                        <label for="proteinsOfTaxa_input">Search for a list of all proteins for a given organism:</label>
+                        <input type="text" class="form-control" id="proteinsOfTaxa_input" placeholder="Enter a taxonomy ID">
+                        <button id="proteinsOfTaxa_button" class="btn btn-primary mt-2">Search</button>
+                    </div>
+                    <!-- proteins of taxonomy search results -->
+                    <div id="proteinsOfTaxa_result" class="mt-5">
+                        <div id="proteinsOfTaxa_result_collapsible" class="collapsible">
+                            <div id="proteinsOfTaxa_result_content" class="collapsible-content"></div>
+                        </div>
+                    </div>
+                    <!-- pfams of taxonomy search form -->
+                    <div class="form-group mt-5">
+                        <label for="pfamsOfTaxa_input">Search for a list of all domains in all the proteins for a given organism:</label>
+                        <input type="text" class="form-control" id="pfamsOfTaxa_input" placeholder="Enter a taxonomy ID">
+                        <button id="pfamsOfTaxa_button" class="btn btn-primary mt-2">Search</button>
+                    </div>
+                    <!-- pfams of taxonomy search results -->
+                    <div id="pfamsOfTaxa_result" class="mt-5">
+                        <div id="pfamsOfTaxa_result_collapsible" class="collapsible">
+                            <div id="pfamsOfTaxa_result_content" class="collapsible-content"></div>
+                        </div>
+                    </div>
+                    <!-- coverage search form -->
+                    <div class="form-group mt-5">
+                        <label for="coverage_input">Search for domain coverage for a given protein:</label>
+                        <input type="text" class="form-control" id="coverage_input" placeholder="Enter a protein ID">
+                        <button id="coverage_button" class="btn btn-primary mt-2">Search</button>
+                    </div>
+                    <!-- coverage search results -->
+                    <div id="coverage_result" class="mt-5">
+                        <div id="coverage_result_collapsible" class="collapsible">
+                            <div id="coverage_result_content" class="collapsible-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block scripts %}
+
+<!-- scripts -->
+<script src="{% static 'js/api.js' %}"></script>
+<script src="{% static 'js/new_protein_form.js' %}"></script>
+<script src="{% static 'js/search_database.js' %}"></script>
+{% endblock %}
+
+
+<!-- END: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->

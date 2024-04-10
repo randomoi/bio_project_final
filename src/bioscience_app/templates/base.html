@@ -1,0 +1,24 @@
+{% load static %} {% load bootstrap4 %}
+<!-- START: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->
+<!-- load static (CSS and JS) -->
+{% bootstrap_css %} {% include 'header.html' %}
+<!-- include header template -->
+{% include "./title.html" %}
+<!-- include title template -->
+{% block content %}{% endblock %} {% include 'footer.html' %}
+<!-- include footer template -->
+{% block scripts %}{% endblock %}
+<!-- references: https://favicon.io/favicon-generator/ -->
+<link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+<link rel="icon" type="image/png" sizes="192x192" href="{% static 'favicon/android-chrome-192x192.png' %}">
+<link rel="icon" type="image/png" sizes="512x512" href="{% static 'favicon/android-chrome-512x512.png' %}">
+<link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+<!-- scripts -->
+<script src="{% static 'js/api.js' %}"></script>
+<script src="{% static 'js/new_protein_form.js' %}"></script>
+<script src="{% static 'js/search_database.js' %}"></script>
+
+<!-- END: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->

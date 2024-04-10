@@ -1,0 +1,18 @@
+<!-- START: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+<div class="search-box mb-3">
+    <!-- label for input field -->
+    <label for="{{ prefix }}input">{{ input_name }}:</label>
+    <div class="input-group">
+        <!-- input field -->
+        <input type="text" class="form-control" id="{{ prefix }}input" name="{{ prefix }}input" placeholder="Enter {{ input_name }}">
+        <!-- search button -->
+        <button class="btn btn-primary" type="button" id="{{ prefix }}button">Search</button>
+    </div>
+</div>
+<!-- container for showing search results -->
+<div class="search-result">
+    <div id="{{ prefix }}result"></div>
+</div>
+
+<!-- END: I wrote the code based on documentation and references. Important links were included in the comments next to each function. # Please review links below and short commentary in readme.txt. Thank you. -->
